@@ -6,9 +6,10 @@ import { watches, countries } from "./data.js";
 const pages = Array.from(document.querySelectorAll(".page")), // so as to get all Array prototypes to use
 	verder = document.querySelectorAll(".verder"),
 	terug = document.querySelectorAll(".terug"),
-	mainPage = document.querySelector(".pages"),
+	// mainPage = document.querySelector(".pages"),
 	progress = document.querySelector(".progress-bar"),
 	watchSelect = document.querySelector(".watchpicker"),
+	bandSelect = document.querySelector(".bandpicker"),
 	countrySelect = document.querySelector(".countrypicker");
 
 const switchPages = (btnType) => {
@@ -68,3 +69,4 @@ const loadOptions = (arr, ParentEl) => {
 
 loadOptions(countries, countrySelect);
 loadOptions(watches, watchSelect);
+// loadOptions(band, bandSelect);

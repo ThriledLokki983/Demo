@@ -8,43 +8,37 @@ export class WatchesDetail {
 		const t = document.querySelector(".watch__title");
 		t.innerHTML = "";
 		e = this.data;
-		// console.log(this.data);
-		e = `<div class="watch__title--name">
-                        ${e.name}
-                      </div>
-                      <div class="watch__title--detail">
-                        <div class="price">
-                            ${e.prijs}.
-                        </div>
-                        <div class="desc">
+		this._renderHTML(e, t);
+	}
 
-                              <span>
-                                  <h6>Functions:</h6>
-                                  <p>${e.desc[0].func}</p>
-                              </span>
-                              <span>
-                              <h6>Uurwerk:</h6>
-                              <p>${e.desc[0].uurwrk}</p>
-                              </span>
-                        </div>
-                    </div>`;
-		return t.insertAdjacentHTML("beforebegin", e), this;
+	loadBandDetails(e) {
+		const t = document.querySelector(".band__title");
+		t.innerHTML = "";
+		e = this.data;
+		this._renderHTML(e, t);
 	}
-}
-export class Band {
-	constructor(e) {
-		this.data = e;
-	}
-	loadBands() {
-		const a = document.querySelector(".project__lists--items");
-		console.log(this.data), (a.innerHTML = "");
-		const n = this.limit;
-		return (
-			this.data.forEach(function (e, t) {
-				e.id < n && a.insertAdjacentHTML("afterbegin", "");
-			}),
-			this
-		);
+
+	_renderHTML(data, ParentEl) {
+		data = `<div class="watch__title--name">
+        ${data.name}
+      </div>
+      <div class="watch__title--detail">
+        <div class="price">
+            ${data.prijs}.
+        </div>
+        <div class="desc">
+
+              <span>
+                  <h6>Functions:</h6>
+                  <p>${data.desc[0].func}</p>
+              </span>
+              <span>
+              <h6>Uurwerk:</h6>
+              <p>${data.desc[0].uurwrk}</p>
+              </span>
+        </div>
+    </div>`;
+		return ParentEl.insertAdjacentHTML("beforebegin", data), this;
 	}
 }
 
