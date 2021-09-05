@@ -1,0 +1,481 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link rel="stylesheet" href="https://use.typekit.net/tsi6hwp.css"> -->
+
+		<script type="module" defer src="./src/js/data.js"></script>
+		<link rel="stylesheet" href="./src/css/style.css" />
+		<link rel="stylesheet" href="./src/css/main.css" />
+		<title>order-form</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header__logo--box">
+				<img src="./src/img/logo.svg" alt="logo" />
+			</div>
+			<div class="header__info">
+				<div class="header__info--progress">
+					<div class="progress">
+						<div
+							class="progress-bar"
+							role="progressbar"
+							style="width: 0"
+							aria-valuenow="25"
+							aria-valuemin="0"
+							aria-valuemax="100"
+						></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<div class="pages">
+				<section class="page page-1 active animated" id="1">
+					<h1 class="search__page--title"> Relatie zoeken </h1>
+
+					<div class="input__page--form-form-field">
+						<div class="mb-3 row row-input">
+							<label for="inputtext" class="col-sm-2 col-form-label label"
+								>Klant</label
+							>
+						</div>
+						<div class="col-sm-10">
+							<input
+								type="text"
+								class="form-control input search-input"
+								id="inputtext"
+								placeholder="voer hier customer voornaam en achternaam"
+							/>
+						</div>
+					</div>
+
+					<div class="btn__box">
+						<div class="next one">
+							<button class="btn btn-primary verder" data-goto-section="2.0"
+								>Nieuwe Klant</button
+							>
+						</div>
+						<div class="next two">
+							<button class="btn btn-primary search">Zoek</button>
+						</div>
+					</div>
+				</section>
+
+				<section class="page page-2" id="2">
+					<h1 class="input__page--form-title">
+						Invoer persoonlijke gegevens
+					</h1>
+					<form action="" class="input__page--form">
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Voornaam</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw voornaam"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Tussenvoegsel</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw tussenvoegel in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Achternaam</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw achternaam in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Adres</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw adres in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Postcode</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw postcode in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Plaats</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw plaats in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Land</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<select
+									class="form-select selectpicker countrypicker select"
+									aria-label=".form-select-lg example"
+								>
+									<!-- this is where all the countries will be listed -->
+								</select>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>E-mailadres</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="email"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw emailadres in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Telefoonnumer</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<input
+									type="tel"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw telefoonnumer in"
+								/>
+							</div>
+						</div>
+
+						<div class="input__page--form-form-field">
+							<div class="mb-3 row row-input">
+								<label
+									for="inputtext"
+									class="col-sm-2 col-form-label label"
+									>Extra opmerkingen</label
+								>
+							</div>
+							<div class="col-sm-10">
+								<textarea
+									rows="10"
+									type="text"
+									class="form-control input"
+									id="inputtext"
+									placeholder="voer hier uw extra opmerking in"
+								></textarea>
+							</div>
+						</div>
+					</form>
+
+					<div class="btn__box">
+						<div class="next one">
+							<button class="btn btn-primary terug" data-goto-section="2.0"
+								>TERUG</button
+							>
+						</div>
+						<div class="next two">
+							<button class="btn btn-primary verder">VERDER</button>
+						</div>
+					</div>
+				</section>
+
+				<section class="page page-3" id="3">
+					<h1 class="details__page--title"> Collectie </h1>
+
+					<div class="input__page--form-form-field">
+						<div class="mb-3 row row-input">
+							<label for="inputtext" class="col-sm-2 col-form-label label"
+								>Horloge</label
+							>
+						</div>
+						<div class="col-sm-10">
+							<select
+								class="form-select watchpicker select"
+								id="watch"
+								aria-label=".form-select-lg example"
+							>
+								<option selected>kies uw horloge</option>
+								<!-- Watch options goes in here
+                                Still have to make sure that value to the options are set also -->
+							</select>
+						</div>
+					</div>
+
+					<div class="input__page--form-form-field">
+						<div class="mb-3 row row-input">
+							<label for="inputtext" class="col-sm-2 col-form-label label"
+								>Band</label
+							>
+						</div>
+						<div class="col-sm-10">
+							<select
+								class="form-select bandpicker select"
+								aria-label="
+                                .form-select-lg example"
+							>
+								<option selected>kies uw band</option>
+								<!-- Band options goes in here
+                                Still have to make sure that value to the options are set also -->
+							</select>
+						</div>
+					</div>
+
+					<div class="input__page--form-form-filed">
+						<h1>Specificaties</h1>
+						<hr />
+						<div class="watch__details">
+							<div class="detail--columns">
+								<span>Type</span>
+								<span>Prijs</span>
+								<span>Details</span>
+							</div>
+							<hr />
+							<div class="watch">
+								<div class="watch__title"> </div>
+							</div>
+							<div class="band">The band</div>
+						</div>
+					</div>
+
+					<div class="btn__box">
+						<div class="next one">
+							<button class="btn btn-primary terug" data-goto-section="2"
+								>TERUG</button
+							>
+						</div>
+						<div class="next two">
+							<button class="btn btn-primary verder" data-goto-section="4"
+								>VERDER</button
+							>
+						</div>
+					</div>
+				</section>
+
+				<section class="page page-4" id="4">
+					<h1 class="details__page--title"> Overzicht </h1>
+
+					<div class="details__page--form">
+						<div class="title">
+							<div class="title__head">Aanhef</div>
+							<div class="title__detail">Dhr</div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Voornamam</div>
+							<div class="title__detail">John</div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Tussenvoegsel</div>
+							<div class="title__detail"></div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Achternaam</div>
+							<div class="title__detail">Doe</div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Adres</div>
+							<div class="title__detail">123 Main Street </div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Postcode</div>
+							<div class="title__detail">NY 10030 </div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Plaats</div>
+							<div class="title__detail">New York </div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Land</div>
+							<div class="title__detail">USA </div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">E-mailadres</div>
+							<div class="title__detail">example@email.com </div>
+						</div>
+
+						<div class="title">
+							<div class="title__head">Telefoonnumer</div>
+							<div class="title__detail">06123459876</div>
+						</div>
+					</div>
+
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col" colspan="10">PRIJS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" rowspan="8" colspan="4" class="hoorloge"
+									>Horloge</th
+								>
+							</tr>
+							<tr>
+								<th scope="row" class="euro">€</th>
+								<td class="value-col">0,00</td>
+								<td class="last">Priolijst</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro">€</th>
+								<td class="value-col"></td>
+								<td class="last">Exact</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro">€</th>
+								<td class="value-col"></td>
+								<td class="last">Nummerlijst</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro">€</th>
+								<td class="value-col"></td>
+								<td class="last">Bevestiging</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro"></th>
+								<td class="value-col"></td>
+								<td class="last">Verkoop</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro"></th>
+								<td class="value-col"></td>
+								<td class="last">Zakje</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro"></th>
+								<td class="value-col"></td>
+								<td class="last">exel. Bier</td>
+							</tr>
+							<tr>
+								<th scope="row" class="euro" rowspan="8" colspan="4"
+									>Total</th
+								>
+							</tr>
+							<tr>
+								<td>€</td>
+								<td class="value-col">0,00</td>
+								<td class="last">0,00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="btn__box">
+						<div class="next one">
+							<button class="btn btn-primary terug" data-goto-section="3"
+								>TERUG</button
+							>
+						</div>
+						<div class="next two">
+							<button class="btn btn-primary verder complete"
+								>COMPLETE</button
+							>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__logo--box">
+				<img src="./src/img/foot.svg" alt="logo" />
+			</div>
+		</footer>
+	</body>
+
+	<script type="module" src="./src/js/main.js"></script>
+</html>
