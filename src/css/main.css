@@ -216,8 +216,38 @@ body {
 .input__page--form-form-field .input {
 	padding: 1rem 5rem;
 	font-size: 1.8rem;
+	/* border: 1px solid red; */
+	/* border-bottom: 3px solid transparent; */
 	border-radius: none !important;
 }
+
+.input {
+	color: inherit;
+	font-family: inherit;
+	transition: all 0.3s;
+}
+.input:focus:invalid {
+	border-bottom: 3px solid red;
+}
+
+.input:focus {
+	outline: none;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+	border-bottom: 3px solid black;
+}
+
+.input::-webkit-input-placeholder {
+	color: #333;
+}
+
+/* .input:placeholder-shown{
+
+} */
+
+/* .label{
+    font-size: ;
+} */
+
 .input__page--form-form-field .row-input {
 	min-width: 20%;
 	text-align: left;
@@ -475,6 +505,23 @@ body {
 	width: 80%;
 }
 
+.verder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem 3rem 1.5rem 2rem !important;
+}
+
+.verder::before {
+	content: "";
+	display: block;
+	background-image: url("../img/chevron-thin-right.svg");
+	background-repeat: no-repeat;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1rem;
+}
+
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
@@ -517,4 +564,54 @@ body {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+.form__group {
+	width: 100%;
+	display: inline-flex;
+	margin-bottom: 2rem;
+}
+.form__group.radio-group {
+	width: 30%;
+	display: inline-block;
+}
+
+.form__radio-input {
+	display: none;
+}
+
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+	opacity: 1;
+}
+
+.form__radio-label {
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	padding-left: 20rem;
+}
+
+.form__radio-button {
+	padding: 6rem;
+	width: 18rem;
+	border: 5px solid red;
+	border-radius: 10px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0rem;
+}
+
+.form__radio-button::after {
+	content: "";
+	height: 5rem;
+	width: 5rem;
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: (translate(-50%, -50%));
+	background-color: red;
+	opacity: 0;
 }

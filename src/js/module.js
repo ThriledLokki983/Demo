@@ -4,6 +4,7 @@ export class WatchesDetail {
 	constructor(e) {
 		this.data = e;
 	}
+
 	loadWatchDetails(e) {
 		const t = document.querySelector(".watch__title");
 		t.innerHTML = "";

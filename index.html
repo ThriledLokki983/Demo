@@ -6,8 +6,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <link rel="stylesheet" href="https://use.typekit.net/tsi6hwp.css"> -->
-
+		<link rel="icon" href="./src/img/favicon-192x192.png" sizes="192x192" />
 		<script type="module" defer src="./src/js/data.js"></script>
 		<link rel="stylesheet" href="./src/css/style.css" />
 		<link rel="stylesheet" href="./src/css/main.css" />
@@ -42,7 +41,7 @@
 
 					<div class="input__page--form-form-field">
 						<div class="mb-3 row row-input">
-							<label for="inputtext" class="col-sm-2 col-form-label label"
+							<label for="klant" class="col-sm-2 col-form-label label"
 								>Klant</label
 							>
 						</div>
@@ -50,17 +49,22 @@
 							<input
 								type="text"
 								class="form-control input search-input"
-								id="inputtext"
+								id="klant"
 								placeholder="voer hier customer voornaam en achternaam"
+								required
 							/>
 						</div>
 					</div>
 
 					<div class="btn__box">
 						<div class="next one">
-							<button class="btn btn-primary verder" data-goto-section="2.0"
-								>Nieuwe Klant</button
+							<button
+								class="btn btn-primary verder"
+								data-goto-section="2.0"
 							>
+								<!-- <img src="./src/img/chevron-thin-right.svg" alt="logo" /> -->
+								Nieuwe Klant
+							</button>
 						</div>
 						<div class="next two">
 							<button class="btn btn-primary search">Zoek</button>
@@ -73,10 +77,38 @@
 						Invoer persoonlijke gegevens
 					</h1>
 					<form action="" class="input__page--form">
+						<div class="form__group">
+							<div class="form__radio-group">
+								<input
+									type="radio"
+									class="form__radio-input"
+									id="dhr"
+									name="aanhef"
+								/>
+								<label for="dhr" class="form__radio-label">
+									<span class="form__radio-button"></span>
+									De heer</label
+								>
+							</div>
+
+							<div class="form__radio-group">
+								<input
+									type="radio"
+									class="form__radio-input"
+									id="mevrouw"
+									name="aanhef"
+								/>
+								<label for="mevrouw" class="form__radio-label">
+									<span class="form__radio-button"></span>
+									Mevrouw
+								</label>
+							</div>
+						</div>
+
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
 								<label
-									for="inputtext"
+									for="voornaam"
 									class="col-sm-2 col-form-label label"
 									>Voornaam</label
 								>
@@ -85,7 +117,7 @@
 								<input
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="voornaam"
 									placeholder="voer hier uw voornaam"
 								/>
 							</div>
@@ -94,7 +126,7 @@
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
 								<label
-									for="inputtext"
+									for="tussenvoegel"
 									class="col-sm-2 col-form-label label"
 									>Tussenvoegsel</label
 								>
@@ -103,7 +135,7 @@
 								<input
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="tussenvoegel"
 									placeholder="voer hier uw tussenvoegel in"
 								/>
 							</div>
@@ -112,7 +144,7 @@
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
 								<label
-									for="inputtext"
+									for="achternaam"
 									class="col-sm-2 col-form-label label"
 									>Achternaam</label
 								>
@@ -121,7 +153,7 @@
 								<input
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="achternaam"
 									placeholder="voer hier uw achternaam in"
 								/>
 							</div>
@@ -129,9 +161,7 @@
 
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
-								<label
-									for="inputtext"
-									class="col-sm-2 col-form-label label"
+								<label for="adres" class="col-sm-2 col-form-label label"
 									>Adres</label
 								>
 							</div>
@@ -139,7 +169,7 @@
 								<input
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="adres"
 									placeholder="voer hier uw adres in"
 								/>
 							</div>
@@ -148,7 +178,7 @@
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
 								<label
-									for="inputtext"
+									for="postcode"
 									class="col-sm-2 col-form-label label"
 									>Postcode</label
 								>
@@ -157,7 +187,7 @@
 								<input
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="postcode"
 									placeholder="voer hier uw postcode in"
 								/>
 							</div>
@@ -165,9 +195,7 @@
 
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
-								<label
-									for="inputtext"
-									class="col-sm-2 col-form-label label"
+								<label for="plaats" class="col-sm-2 col-form-label label"
 									>Plaats</label
 								>
 							</div>
@@ -175,7 +203,7 @@
 								<input
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="plaats"
 									placeholder="voer hier uw plaats in"
 								/>
 							</div>
@@ -183,9 +211,7 @@
 
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
-								<label
-									for="inputtext"
-									class="col-sm-2 col-form-label label"
+								<label for="land" class="col-sm-2 col-form-label label"
 									>Land</label
 								>
 							</div>
@@ -193,6 +219,7 @@
 								<select
 									class="form-select selectpicker countrypicker select"
 									aria-label=".form-select-lg example"
+									id="land"
 								>
 									<!-- this is where all the countries will be listed -->
 								</select>
@@ -201,9 +228,7 @@
 
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
-								<label
-									for="inputtext"
-									class="col-sm-2 col-form-label label"
+								<label for="email" class="col-sm-2 col-form-label label"
 									>E-mailadres</label
 								>
 							</div>
@@ -211,7 +236,7 @@
 								<input
 									type="email"
 									class="form-control input"
-									id="inputtext"
+									id="email"
 									placeholder="voer hier uw emailadres in"
 								/>
 							</div>
@@ -219,9 +244,7 @@
 
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
-								<label
-									for="inputtext"
-									class="col-sm-2 col-form-label label"
+								<label for="tel" class="col-sm-2 col-form-label label"
 									>Telefoonnumer</label
 								>
 							</div>
@@ -229,7 +252,7 @@
 								<input
 									type="tel"
 									class="form-control input"
-									id="inputtext"
+									id="tel"
 									placeholder="voer hier uw telefoonnumer in"
 								/>
 							</div>
@@ -238,7 +261,7 @@
 						<div class="input__page--form-form-field">
 							<div class="mb-3 row row-input">
 								<label
-									for="inputtext"
+									for="opmerking"
 									class="col-sm-2 col-form-label label"
 									>Extra opmerkingen</label
 								>
@@ -248,7 +271,7 @@
 									rows="10"
 									type="text"
 									class="form-control input"
-									id="inputtext"
+									id="opmerking"
 									placeholder="voer hier uw extra opmerking in"
 								></textarea>
 							</div>
@@ -272,7 +295,7 @@
 
 					<div class="input__page--form-form-field">
 						<div class="mb-3 row row-input">
-							<label for="inputtext" class="col-sm-2 col-form-label label"
+							<label for="horloge" class="col-sm-2 col-form-label label"
 								>Horloge</label
 							>
 						</div>
@@ -281,6 +304,7 @@
 								class="form-select watchpicker select"
 								id="watch"
 								aria-label=".form-select-lg example"
+								id="horloge"
 							>
 								<option selected>kies uw horloge</option>
 								<!-- Watch options goes in here
@@ -291,7 +315,7 @@
 
 					<div class="input__page--form-form-field">
 						<div class="mb-3 row row-input">
-							<label for="inputtext" class="col-sm-2 col-form-label label"
+							<label for="band" class="col-sm-2 col-form-label label"
 								>Band</label
 							>
 						</div>
@@ -300,6 +324,7 @@
 								class="form-select bandpicker select"
 								aria-label="
                                 .form-select-lg example"
+								id="band"
 							>
 								<option selected>kies uw band</option>
 								<!-- Band options goes in here
